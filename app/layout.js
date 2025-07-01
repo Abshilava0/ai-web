@@ -1,5 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Mina } from 'next/font/google';
+import Header from "./components/header";
+
+const mina = Mina({
+  subsets: ['latin'],
+  weight: ['400', '700'], // Choose the weights you want
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +26,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${mina.className}`}>
+        <Header/>
         {children}
       </body>
     </html>
