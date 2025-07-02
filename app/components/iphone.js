@@ -3,6 +3,6 @@ import Spline from '@splinetool/react-spline';
 
 export default function Iphone() {
   return (
-    <Spline className={classes.background} scene="/iphone.spline" />
+    <Spline className={classes.background} scene="/iphone.splinecode" />
   );
 }

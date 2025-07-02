@@ -1,11 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import SplineBackground from "./components/spline";
 
 import classes from "./page.module.css";
-import TrueFocus from "./components/TrueFocus";
+const TrueFocus = dynamic(() => import("./components/TrueFocus"))
+
 import Link from "next/link";
-import Iphone from "./components/iphone";
+const Iphone = dynamic(() => import("./components/iphone"), { ssr: false });
 import Stepper, { Step } from "./components/stepper";
 import { useState } from "react";
 
