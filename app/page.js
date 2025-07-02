@@ -1,15 +1,14 @@
 "use client";
 
 import SplineBackground from "./components/spline";
-import { useState } from "react";
+
 import classes from "./page.module.css";
 import TrueFocus from "./components/TrueFocus";
 import Link from "next/link";
 import Iphone from "./components/iphone";
-import Stepper, { Step } from "./components/stepper";
 
 export default function Home() {
-  const [name, setName] = useState("");
+
 
   return (
     <>
