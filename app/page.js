@@ -39,62 +39,7 @@ export default function Home() {
         </Link>
       </div>
       <Iphone />
-      <div className={classes.stepperCont}>
-        <Stepper
-          initialStep={1}
-          onStepChange={(step) => {
-            console.log(step);
-          }}
-          onFinalStepCompleted={() => console.log("All steps completed!")}
-          backButtonText="Previous"
-          nextButtonText="Next"
-        >
-          <Step>
-            <h2>Welcome to the React Bits stepper!</h2>
-            <p>Check out the next step!</p>
-          </Step>
-          <Step>
-            <h2>Step 2</h2>
-            <img
-              alt="image"
-              src="Ai.png"
-              style={{
-                height: "100px",
-                width: "100%",
-                objectFit: "cover",
-                objectPosition: "center -70px",
-                borderRadius: "15px",
-                marginTop: "1em",
-              }}
-            />
-
-            <p>Custom step content!</p>
-          </Step>
-          <Step>
-            <h2>How about an input?</h2>
-            <input
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Your name?"
-            />
-          </Step>
-          <Step>
-            <h2>Final Step</h2>
-            <p>You made it!</p>
-          </Step>
-        </Stepper>
-        <div className={classes.stepperInfo}>
-          <h1>Smarter Solutions with AI</h1>
-          <p>
-            
-            Harness the power of artificial intelligence to automate workflows,
-            enhance decision-making, and unlock new possibilities for your
-            business. Whether building smarter products or streamlining
-            operations, AI helps you solve complex problems faster and more
-            efficiently than ever before.
-          </p>
-        </div>
-      </div>
+      
     </>
   );
 }
