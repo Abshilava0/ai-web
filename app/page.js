@@ -1,14 +1,16 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import SplineBackground from "./components/spline";
-
+const SplineBackground = dynamic(() => import("./components/spline"), {
+  ssr: false,
+});
 import classes from "./page.module.css";
 
 import Link from "next/link";
 const Iphone = dynamic(() => import("./components/iphone"), { ssr: false });
 import Stepper, { Step } from "./components/stepper";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -51,16 +53,12 @@ export default function Home() {
           </Step>
           <Step>
             <h2>Step 2</h2>
-            <img
-              style={{
-                height: "100px",
-                width: "100%",
-                objectFit: "cover",
-                objectPosition: "center -70px",
-                borderRadius: "15px",
-                marginTop: "1em",
-              }}
+            <Image
               src="/Ai.png"
+              alt="AI Illustration"
+              width={383}
+              height={100}
+              className={classes.aiImage}
             />
             <p>Custom step content!</p>
           </Step>
