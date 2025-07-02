@@ -42,7 +42,8 @@ export default function Home() {
       </div>
       <Iphone />
 
-      <Stepper
+      <div className={classes.stepperCont}>
+         <Stepper
         initialStep={1}
         onStepChange={(step) => {
           console.log(step);
@@ -66,7 +67,7 @@ export default function Home() {
               borderRadius: "15px",
               marginTop: "1em",
             }}
-            src="https://www.purrfectcatgifts.co.uk/cdn/shop/collections/Funny_Cat_Cards_640x640.png?v=1663150894"
+            src="/Ai.png"
           />
           <p>Custom step content!</p>
         </Step>
@@ -83,6 +84,13 @@ export default function Home() {
           <p>You made it!</p>
         </Step>
       </Stepper>
+      <div className={classes.stepperInfo}>
+        <h1>Empowering the Future</h1>
+        <p>Explore the cutting edge of AI technology — from machine learning and robotics to real-time automation and intelligent systems. Unlock what is possible with human-inspired intelligence at your fingertips.</p>
+      </div>
+      </div>
+     
+
     </>
   );
 }

@@ -8,17 +8,6 @@
   padding: 1rem;
 }
 
-@media (min-width: 640px) {
-  .outer-container {
-    aspect-ratio: 4 / 3;
-  }
-}
-
-@media (min-width: 768px) {
-  .outer-container {
-    aspect-ratio: 2 / 1;
-  }
-}
 
 .step-circle-container {
   margin-left: auto;
@@ -31,8 +20,9 @@
 }
 
 .step-indicator-row {
+  overflow-x: hidden;
   display: flex;
-  width: 100%;
+  width: 85%;
   align-items: center;
   padding: 2rem;
 }
@@ -120,6 +110,7 @@
   justify-content: center;
   border-radius: 9999px;
   font-weight: 600;
+  padding: 0.5em;
 }
 
 .active-dot {
