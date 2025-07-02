@@ -7,8 +7,12 @@ import TrueFocus from "./components/TrueFocus";
 import Link from "next/link";
 import Iphone from "./components/iphone";
 import Stepper, { Step } from "./components/stepper";
+import { useState } from "react";
 
 export default function Home() {
+
+  const [name, setName] = useState("");
+
   return (
     <>
       <main className={classes.container}>
