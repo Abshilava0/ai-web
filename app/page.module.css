@@ -8,27 +8,26 @@
 
 
 .mainText {
+  margin-top: 10em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  transform: translate(-50%, -50%);
+  align-items: center;
   z-index: 1;
   color: black;
   gap: 1em;
-  
-
 }
 
-
-
+.mainText p{
+  font-size: 1.3em;
+  line-height: 1.8em;
+  width: 60%;
+  text-align: center;
+}
 
 /* From Uiverse.io by lenfear23 */
 .btn {
-  margin-top: 1em;
+  margin-top: 1.3em;
  --color: #000000;
  --color2: rgb(255, 255, 255);
  padding: 0.8em 1.75em;
@@ -98,5 +97,11 @@
 @media(max-width: 1100px) {
   .btn{
     display: none;
+  }
+}
+
+@media(min-width: 1440px) {
+  .btn{
+    font-size: 1.2em;
   }
 }
